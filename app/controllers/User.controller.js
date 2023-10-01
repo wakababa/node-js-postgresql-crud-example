@@ -39,7 +39,7 @@ exports.findAll = (req, res) => {
 
     User.findAll({ where: condition })
         .then(data => {
-            res.send(data);
+            res.send([{username:"waka"}]);
         })
         .catch(err => {
             res.status(500).send({
