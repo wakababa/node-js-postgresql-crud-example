@@ -1,16 +1,12 @@
 const tutorials = require("../controllers/tutorial.controller");
 module.exports = app => {
   const tutorials = require("../controllers/tutorial.controller.js");
-  const users = require("../controllers/User.controller");
 
   var router = require("express").Router();
 
   console.log("started");
   // Create a new Tutorial
   router.post("/", tutorials.create);
-
-  // Retrieve all Tutorials
-  router.get("/users", users.findAll);
 
   // Retrieve all Tutorials
   router.get("/", tutorials.findAll);
